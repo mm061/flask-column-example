@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Steel Column Axial Capacity</title>
+</head>
+
+<body>
+  <h4>Flask Example - Column Axial Capacity</h4>
+  <form method="POST" action="" enctype="multipart/form-data">
+    <label for="moment_of_inertia">Section Moment of Inertia (in4):</label><br>
+    <input type="number" id="moment_of_inertia" name="moment_of_inertia"><br>
+    <label for="section_area">Section Area (in2):</label><br>
+    <input type="float" id="section_area" name="section_area"><br>
+    <label for="k_l">Unbraced Length (ft):</label><br>
+    <input type="number" id="k_l" name="k_l"><br>
+    <label for="steel_modulus_of_elasticity">Steel Modulus of Elasticity (ksi):</label><br>
+    <input type="number" id="steel_modulus_of_elasticity" name="steel_modulus_of_elasticity"><br>
+    <label for="steel_yield_stress">Steel Yield Stress (ksi):</label><br>
+    <input type="number" id="steel_yield_stress" name="steel_yield_stress"><br>
+    <br>
+    <button type="submit">Submit</button>
+    <br>
+    <br>
+    <b>      
+      {% for message in get_flashed_messages() %}
+      <p style="color:blue">{{ message }}</p>
+      {% endfor %}
+  </form>
+</body>
+</html>
